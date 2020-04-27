@@ -7,6 +7,9 @@ void bitwise_BIC();
 void bitwise_NOT();
 void bitwise_EXP();
 
+// C8D6
+// F76E
+
 int main(void) {
 
     int num1;
@@ -65,7 +68,9 @@ void bitwise_XOR(int *nb1, int *nb2) {
 void bitwise_BIC(int *nb1, int *nb2) {
     int temp1 = *nb1;
     int temp2 = *nb2;
-    *nb1 = ~temp1 ^ (~temp2 | (temp1 & temp2))
+    int operationResult = temp1 ^ temp2;
+    *nb1 &= ~(1 << temp1);
+    *nb1 &= ~(1 << temp2);
 }
 
 void bitwise_NOT(int *nb1, int *nb2) {
@@ -78,5 +83,7 @@ void bitwise_NOT(int *nb1, int *nb2) {
 }
 
 void bitwise_EXP(int *nb1, int *nb2) {
-
+    int temp1 = *nb1;
+    int temp2 = *nb2;
+    *nb1 = ~temp1 ^ (~temp2 | (temp1 & temp2))
 }
