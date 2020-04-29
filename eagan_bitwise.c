@@ -66,7 +66,7 @@ int main(void) {
 
     printf("\n");
 
-    printf("Enter the positive in Hex(8 bytes) to be shifted without prefix '0x': ");
+    printf("Enter the positive in Hex (8 bytes) to be shifted without prefix '0x': ");
     scanf("%X", &shiftValue);
 
     printf("By how many positions do you want to shift the number?: ");
